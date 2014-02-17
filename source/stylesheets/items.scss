@@ -1,0 +1,116 @@
+@import 'bits';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/images';
+@import 'compass/css3/box-shadow';
+@import "compass/css3/user-interface";
+
+table.items {
+  background-color: $light-blue;
+  margin: 5px auto;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  @include single-box-shadow;
+
+  &, & input {
+    color: lighten($black, 13%);
+    font-weight: 700;
+  }
+
+  th, td {
+    padding: 5px;
+    border-bottom: solid 1px $white;
+  }
+
+  th, .buddy-name {
+    background-color: $dark-blue;
+    color: $light-gray;
+
+    &.buddy {
+      padding: 5px 15px;
+    }
+  }
+
+  .buddy {
+    text-align: center;
+  }
+
+  .total td {
+    border-bottom: none;
+  }
+
+  .item:hover, .total:hover, #new-item input:hover, .item:hover input {
+    background-color: darken($light-blue, 5%);
+  }
+
+  .total td, #new-item td.buddy {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #so-item-name-header {
+    padding-left: 10px;
+  }
+
+  .item.unpaid, .item.unpaid input {
+    background-color: #F66;
+
+    &:hover, &:hover input {
+      background-color: #F88;
+    }
+  }
+
+  .name {
+    $default-width: 120px;
+    width: $default-width;
+    min-width: $default-width;
+  }
+
+  td.suchnumber {
+    text-align: right;
+  }
+
+  .price {
+    min-width: 5em;
+    text-align: right;
+  }
+
+  .qty {
+    min-width: 3em;
+    text-align: right;
+  }
+
+  .item input {
+    border: none;
+  }
+
+  input {
+    border: solid 1px $light-gray;
+    background-color: $light-blue;
+    padding: 2px 4px;
+  }
+  .portion-box {
+    display: none;
+
+    &:checked ~ label {
+      background: $dark-green;
+      color: $light-gray;
+
+      &:before {
+        content: 'very pay';
+      }
+    }
+
+    & ~ label {
+      background: $red;
+      color: $light-gray;
+      padding: 3px;
+      @include user-select(none);
+      @include border-radius(5px);
+
+      &:before {
+        content: 'no way';
+      }
+    }
+  }
+}
+

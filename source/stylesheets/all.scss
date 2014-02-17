@@ -1,0 +1,91 @@
+@import "foundation/variables";
+@import "bits";
+@import "foundation";
+@import "items";
+@import 'compass/css3/images';
+@import "compass/css3/user-interface";
+
+
+@charset "utf-8";
+
+body {
+  //much rainbow
+  $o: .5;
+  @include background(linear-gradient(
+  left,
+  color-stops( 
+		rgba(255,0,0,$o), 
+		rgba(255,165,0,$o), 
+		rgba(255,255,0,$o), 
+		rgba(0,255,0,$o), 
+		rgba(0,0,255,$o), 
+		rgba(75,0,130,$o), 
+		rgba(238,130,238,$o))), $blue);
+}
+
+input {
+  font-family: $font-family-1;
+}
+
+.suchdoge {
+  height: 180px;
+  width: default;
+  background: url('/images/doge.png') no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+input.buddy-name {
+  background-color: $dark-blue;
+  color: $light-gray;
+  width: 41px;
+  border: none !important;
+  padding: 0 !important;
+  font-size: 16px;
+  resize: horizontal;
+}
+
+// add/remove
+.add {
+  font-weight: 700;
+  color: $dark-green;
+  cursor: pointer;
+}
+.add.buddy {
+  color: $green;
+}
+
+.remove {
+  color: $red;
+  cursor: pointer;
+}
+
+th.remove.all {
+  background: $red;
+}
+
+#new-item td.add, table .item td.remove {
+  min-width: 25px;
+  text-align: center;
+  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.add:hover {
+  text-shadow: 0 0 5px lime;
+}
+
+.remove:hover {
+  text-shadow: 0 0 5px red;
+}
+
+.such.overlay {
+  pointer-events: none;
+  @include user-select(none);
+}
+
+.wow {
+  position: absolute;
+}

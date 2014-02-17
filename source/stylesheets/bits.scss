@@ -1,0 +1,37 @@
+$blue: #48F;
+$dark-blue: #24A;
+$light-blue: lighten($blue, 20%);
+$white: #FFF;
+$light-gray: #DDD;
+$black: #222;
+$light-black: #666; // =O
+$green: #3F6;
+$dark-green: #093;
+$red: #C30;
+
+$color-1: $blue;
+$color-2: $white;
+$color-3: $black;
+
+$primary-color: $color-1;
+$secondary-color: $color-2;
+// $alert-color: #c60f13;
+// $success-color: #5da423;
+
+
+$body-bg: $color-1;
+$body-font-color: $color-2;
+
+
+$font-family-1: Comic Sans MS, Comic Sans, Chalkboard, Helvetica, Arial, sans-serif;
+$font-family-2: serif;
+
+$body-font-family: $font-family-1;//palatino linotype, palatino, serif;
+$header-font-family: $font-family-1; //palatino linotype, palatino, serif;
+$header-font-weight: normal;
+// $header-font-style: normal;
+$header-font-color: $color-2;
+// $header-line-height: 1.4;
+// $header-top-margin: .2em;
+// $header-bottom-margin: .5em;
+// $header-text-rendering: optimizeLegibility;

@@ -1,0 +1,72 @@
+---
+title: such bill.  very split.  wow.
+---
+<div class="row such overlay">
+  <div class="suchdoge"></div>
+  <h1 class="text-center">such bill - very split</h1>
+</div>
+<div id="app" class="wrap row app">
+  <div id="bill">
+    <table class="items">
+      <tr id="item-header"></tr>
+      <tr id="new-item"></tr>
+      <tr id="total" class="total">
+        <td></td>
+        <td id="total-label">Total:</td>
+        <td></td>
+        <td id="total-end"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- very template -->
+<script id="header-tmpl" type="text/template">
+  <th class="remove all" title="many fear">clear</th>
+  <th id="so-item-name-header" class="text-left" >Item:</th>
+  <th>Price</th>
+  <th>Qty</th>
+  <th class="header-end add buddy" title="much doge">+😃</th>
+</script>
+
+<script id="new-item-tmpl" type="text/template">
+  <td id="add-item" title="so item" class="add">+</td>
+  <td><input tabindex=1 id="new-name" class="name" placeholder="very twinkie"></input></td>
+  <td class="suchnumber"><input tabindex=2 id="new-price" class="price" placeholder="9000.01"></input></td>
+  <td class="suchnumber"><input tabindex=3 id="new-qty" class="qty" placeholder="1"></input></td>
+  <td id="new-end" class="item-end"></td>
+</script>
+
+<script id="buddy-header-tmpl" type="text/template">
+  <span class="remove buddy" title="10/10 unfair" data-order="{{= order}}">✘</span>
+  <input class="buddy-name" value="{{= name }}" />
+</script>
+
+<script id="buddy-new-tmpl" type="text/template">
+  <td class="new buddy buddy{{= _id }}" data-buddyId="{{= _id }}" >
+    <input id="new-buddy-portion-{{= _id }}" class="portion-box" tabindex={{= order + 3 }} type='checkbox' checked/>
+    <label for="new-buddy-portion-{{= _id }}" title="so default"></label>
+  </td>
+</script>
+
+<script id="portion-tmpl" type="text/template">
+  <input id="such-portion-{{= _id }}" class="portion-box" type='checkbox' {{= included ? 'checked' : '' }} />
+  <label for="such-portion-{{= _id }}" title="so option"></label>
+</script>
+
+<script id="buddy-total-tmpl" type="text/template">
+  {{= (+total).toFixed(2) }}
+</script>
+
+
+<script id="grand-total-tmpl" type="text/template">
+  {{= (+total).toFixed(2) }}
+</script>
+
+<script id="item-tmpl" type="text/template">
+  <td class="remove" title="such destroy" >✘</td>
+  <td><input class="name" value="{{= name}}"/></td>
+  <td class="suchnumber" ><input class="price" value="{{= (+price).toFixed(2)}}"/></td>
+  <td class="suchnumber" ><input class="qty" value="{{= qty }}"/></td>
+  <td class="item-end"></td>
+</script>
