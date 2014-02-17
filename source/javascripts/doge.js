@@ -1,15 +1,18 @@
-(function($,_) {
+(function($, _, window) {
+    window.dogeination = {};
     var suchcolors = [
       "#0066FF", "#FF3399", "#33CC33", "#FFFF99", "#FFFF75", "#8533FF",
       "#33D6FF", "#FF5CFF", "#19D1A3", "#FF4719", "#197519", "#6699FF", "#4747D1",
       "#D1D1E0", "#FF5050", "#FFFFF0", "#CC99FF", "#66E0C2", "#FF4DFF", "#00CCFF" ];
     var suchwords = [];
+
     function addWord(word, weight) {
       weight = weight || 3;
       for(var i = 0; i < weight; i++){
         suchwords.push(word);
       }
     };
+
     addWord('such bill');
     addWord('very split');
     addWord('much fair');
@@ -24,7 +27,8 @@
       return arr[Math.floor(Math.random() * arr.length)];
     }
     var overlay = $('.such.overlay');
-    var delay = 2500;
+    window.dogeination.dogelay = 2500;
+    var timeout = false;
     function doShibe(){
       //var left = overlay.position().left + Math.random() * overlay.width() + 'px';
       var fontSize = Math.max(20, (Math.random() * 50 + 24));
@@ -41,7 +45,16 @@
       if ($(".wow").length > 8 ) {
         $('.wow').first().remove();
       }
-      setTimeout(doShibe, delay);
+      timeout = setTimeout(doShibe, window.dogeination.dogelay);
     }
-    setTimeout(doShibe, delay);
-})($,_);
+    function redoShibe() {
+      if(timeout) window.clearTimeout(timeout);
+      timeout = setTimeout(doShibe, window.dogeination.dogelay);
+    }
+    redoShibe();
+
+    window.dogeination.suchwords = suchwords;
+    window.dogeination.suchcolors = suchcolors;
+    window.dogeination.addWord = addWord;
+    window.dogeination.redoShibe = redoShibe;
+})($, _, window);

@@ -5,7 +5,7 @@
 @import "compass/css3/user-interface";
 
 table.items {
-  background-color: $light-blue;
+
   margin: 5px auto;
   border-collapse: collapse;
   border-spacing: 0px;
@@ -14,6 +14,12 @@ table.items {
   &, & input {
     color: lighten($black, 13%);
     font-weight: 700;
+    background-color: $light-blue;
+  }
+
+  input {
+    border: solid 1px $light-gray;
+    padding: 2px 4px;
   }
 
   th, td {
@@ -24,10 +30,6 @@ table.items {
   th, .buddy-name {
     background-color: $dark-blue;
     color: $light-gray;
-
-    &.buddy {
-      padding: 5px 15px;
-    }
   }
 
   .buddy {
@@ -83,22 +85,8 @@ table.items {
     border: none;
   }
 
-  input {
-    border: solid 1px $light-gray;
-    background-color: $light-blue;
-    padding: 2px 4px;
-  }
   .portion-box {
     display: none;
-
-    &:checked ~ label {
-      background: $dark-green;
-      color: $light-gray;
-
-      &:before {
-        content: 'very pay';
-      }
-    }
 
     & ~ label {
       background: $red;
@@ -109,6 +97,15 @@ table.items {
 
       &:before {
         content: 'no way';
+      }
+    }
+
+    &:checked ~ label {
+      background: $dark-green;
+      color: $light-gray;
+
+      &:before {
+        content: 'very pay';
       }
     }
   }

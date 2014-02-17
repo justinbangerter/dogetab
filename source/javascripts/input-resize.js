@@ -3,7 +3,7 @@ $(document).ready(function(){
   .appendTo($('body'));
   window.inputResize = function($elements, padding){
 
-    padding = padding || 0;
+    padding = padding || 10;
 
     function width(pad){
       return function($el){

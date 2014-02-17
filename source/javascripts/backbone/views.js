@@ -113,7 +113,7 @@ var Views = (function () {
         renders.add('item');
         this.$el.html(this.template(this.model.toJSON()));
         this.addAllPortions().portionChange();
-        inputResize(this.$('.name'), 5);
+        inputResize(this.$('.name'), 10);
         inputResize(this.$('.qty'), 10);
         inputResize(this.$('.price'), 10);
         return this;
@@ -233,7 +233,7 @@ var Views = (function () {
       render: function(){
         renders.add('buddy_header');
         this.$el.html(this.template(this.model.toJSON()))
-        inputResize(this.$('.buddy-name'),4);
+        inputResize(this.$('.buddy-name'),8);
         return this;
       },
       renameBuddy: function(e) {
@@ -295,7 +295,7 @@ var Views = (function () {
         renders.add('app');
         this.$header.html(this.headerTemplate());
         this.$new_item.html(this.newItemTemplate());
-        inputResize(this.$('.name'), 5);
+        inputResize(this.$('.name'), 10);
         inputResize(this.$('.qty'), 10);
         inputResize(this.$('.price'), 10);
         this.addAllBuddies();

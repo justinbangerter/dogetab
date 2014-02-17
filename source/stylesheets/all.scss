@@ -2,6 +2,7 @@
 @import "bits";
 @import "foundation";
 @import "items";
+@import "add-remove";
 @import 'compass/css3/images';
 @import "compass/css3/user-interface";
 
@@ -46,41 +47,6 @@ input.buddy-name {
   resize: horizontal;
 }
 
-// add/remove
-.add {
-  font-weight: 700;
-  color: $dark-green;
-  cursor: pointer;
-}
-.add.buddy {
-  color: $green;
-}
-
-.remove {
-  color: $red;
-  cursor: pointer;
-}
-
-th.remove.all {
-  background: $red;
-}
-
-#new-item td.add, table .item td.remove {
-  min-width: 25px;
-  text-align: center;
-  padding: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.add:hover {
-  text-shadow: 0 0 5px lime;
-}
-
-.remove:hover {
-  text-shadow: 0 0 5px red;
-}
-
 .such.overlay {
   pointer-events: none;
   @include user-select(none);
@@ -89,3 +55,30 @@ th.remove.all {
 .wow {
   position: absolute;
 }
+
+.ourinfo {
+  bottom: 0;
+  color: #FFFFE6;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 0 10px 10px 0;
+  position: fixed;
+  right: 0;
+  text-align: right;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #FFFF99;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      color: #FF3399;
+    }
+  }
+}
+

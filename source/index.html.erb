@@ -2,22 +2,49 @@
 title: such bill.  very split.  wow.
 ---
 <div class="row such overlay">
+  <% if environment != :development %>
+    <div class="such friends">
+      <div
+          class="fb-like"
+          data-href="http://dogetab.com"
+          data-layout="button"
+          data-action="like"
+          data-show-faces="true"
+          data-share="true"></div>
+      <a
+          href="https://twitter.com/share"
+          class="twitter-share-button"
+          data-lang="en"
+          data-hashtags="dogetab"
+          data-count="none">Tweet #dogetab</a>
+      <div
+          class="g-plusone"
+          data-size="medium"
+          data-annotation="none"></div>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+  <%end%>
   <div class="suchdoge"></div>
   <h1 class="text-center">such bill - very split</h1>
 </div>
 <div id="app" class="wrap row app">
-  <div id="bill">
-    <table class="items">
-      <tr id="item-header"></tr>
-      <tr id="new-item"></tr>
-      <tr id="total" class="total">
-        <td></td>
-        <td id="total-label">Total:</td>
-        <td></td>
-        <td id="total-end"></td>
-      </tr>
-    </table>
-  </div>
+  <table class="items">
+    <tr id="item-header"></tr>
+    <tr id="new-item"></tr>
+    <tr id="total" class="total">
+      <td></td>
+      <td id="total-label">Total:</td>
+      <td></td>
+      <td id="total-end"></td>
+    </tr>
+  </table>
+</div>
+<div class="ourinfo">
+  <p>wow <a target="_blank" href="https://github.com/justinbangerter/dogetab">github</a></p>
+  <p>very <a target="_blank" href="http://dogeweather.com/">inspire</a></p>
+  <p>hello <a target="_blank" href="https://twitter.com/JustinBangerter">Justin</a></p>
+  <p id="dogecoinbox">many <a href="javascript:$('#coinaddress').show(); void(0);" id="coinclick">tip</a></p>
+  <p id="coinaddress" style="display: none;">dogecoin address: D9mphHrf7QPWD7n8Lqbo6a4G1hGHp7X4Hw</p>
 </div>
 
 <!-- very template -->

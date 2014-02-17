@@ -3,6 +3,7 @@
 //= require vendor/backbone.js
 //= require vendor/backbone-relational.js
 //= require vendor/backbone.localStorage.js
+//= require vendor/konami.js
 //= require backbone/settings.js
 //= require backbone/models.js
 //= require backbone/views.js
